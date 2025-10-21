@@ -37,6 +37,19 @@ public class main {
         System.out.println("Arrays multipliziert: " + Arrays.toString(multiArray));
         System.out.println("Arrays geteilt: " + Arrays.toString(divArray));
 
+        System.out.println("A4: ");
+        int[] pricesKeyboard = {40,35,70,15,45};
+        int[] pricesUnit = {20,15,40,15};
+        int cheapestKeyboard = electronicsBudgeting.cheapestKeyboard(pricesKeyboard);
+        int mostExpensiveObject = electronicsBudgeting.mostExpensiveObject(pricesKeyboard, pricesUnit);
+        int mostExpensiveAffordable = electronicsBudgeting.mostExpensiveAfforadble(pricesUnit, 25);
+        int mostExpAffordableSetup = electronicsBudgeting.mostExpAffordableSetup(pricesKeyboard, pricesUnit, 70);
+
+        System.out.println("Billigste Tastatur: " + cheapestKeyboard);
+        System.out.println("Teuersten Gegenstand: " + mostExpensiveObject);
+        System.out.println("Teuerste Laufwerk im Budget: " + mostExpensiveAffordable);
+        System.out.println("Groesste Geldbetrag fuer Tastatur und USB im Budget: " + mostExpAffordableSetup);
+
 
 
 
