@@ -21,8 +21,8 @@ public class gradesManager {
         for (int i=0; i<grades.length; i++) {
             sum += grades[i];
         }
-        double result = sum/grades.length;
-        return result;
+        double result = (double)sum/grades.length;
+        return Math.round(result * 100)/100.0;
     }
 
     public static int[] roundedGrades(int[] grades) {
