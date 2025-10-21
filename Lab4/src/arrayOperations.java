@@ -49,4 +49,47 @@ public class arrayOperations {
             return difference;
         }
     }
+
+    public static int[] multiArray(int[] x, int n) {
+        int addToNext = 0;
+        int[] result = new int[x.length + 1];
+        for (int i = x.length - 1; i>=0; i--) {
+            int multiply = x[i] * n + addToNext;
+            if (multiply > 9) {
+                result[i+1] = multiply%10;
+                addToNext = multiply/10;
+            } else {
+                result[i+1] = multiply;
+                addToNext = 0;
+            }
+        }
+        result[0]=addToNext;
+        if (addToNext == 0) {
+            int[] newResult = new int[x.length];
+            for (int i=0; i<x.length; i++) {
+                newResult[i]=result[i+1];
+            }
+            return newResult;
+        }
+        return result;
+    }
+
+    public static int[] divArray(int[] x, int n) {
+        int[] result = new int[x.length];
+        int remaining = 0;
+
+        for (int i=0; i< x.length; i++) {
+            int current = remaining*10 + x[i];
+            result[i] = current/n;
+            remaining = current%n;
+        }
+        if (result[0] == 0 && result.length > 1) {
+            int[] newResult = new int[result.length - 1];
+            for (int i=1; i<result.length; i++) {
+                newResult[i-1] = result[i];
+            }
+            return newResult;
+        }
+        return result;
+    }
 }

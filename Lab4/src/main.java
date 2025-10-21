@@ -26,12 +26,18 @@ public class main {
         System.out.println("Minimale Summe von n-1: " + minSumMinusOne);
 
         System.out.println("A3: ");
-        int[] x = {3,4,0,0,0,0,0,0,0};
+        int[] x = {6,4,0,0,0,0,0,0,0};
         int[] y = {1,3,0,0,0,0,0,0,0};
         int[] sumArrays = arrayOperations.sumArrays(x, y);
         int[] diffArrays = arrayOperations.diffArrays(x, y);
+        int[] multiArray = arrayOperations.multiArray(x,4);
+        int[] divArray = arrayOperations.divArray(x,4);
         System.out.println("Arrays addiert: " + Arrays.toString(sumArrays));
         System.out.println("Arrays subtrahiert: " + Arrays.toString(diffArrays));
+        System.out.println("Arrays multipliziert: " + Arrays.toString(multiArray));
+        System.out.println("Arrays geteilt: " + Arrays.toString(divArray));
+
+
 
 
     }
