@@ -25,6 +25,11 @@ public class main {
         System.out.println("Maximale Summe von n-1: " + maxSumMinusOne);
         System.out.println("Minimale Summe von n-1: " + minSumMinusOne);
 
+        System.out.println("A3: ");
+        int[] x = {1,3,0,0,0,0,0,0,0};
+        int[] y = {9,7,0,0,0,0,0,0,0};
+        int[] sumArrays = arrayOperations.sumArrays(x, y);
+        System.out.println("Arrays addiert: " + Arrays.toString(sumArrays));
 
     }
 }
