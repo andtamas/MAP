@@ -5,7 +5,7 @@ public class gradesManager {
 
         for (int i=0; i<grades.length; i++) {
             if (grades[i]<38) {
-                failing[i] = grades[i];
+                failing[count] = grades[i];
                 count++;
             }
         }
